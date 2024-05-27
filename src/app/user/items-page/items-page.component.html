@@ -2,9 +2,9 @@
     <div>
         <app-user-header></app-user-header>
     </div>
-    <div class="container-fluid mx-5">
+    <div class="container-fluid mx-auto">
         <div class="row">
-            <div class="col-2 bg-white card filter m-1 p-0">
+            <div class="col-lg-2 col-sm-0 bg-white card filter m-1 p-0">
                 <!-- <div class="card-image py-3"> 
                     <div><b> Filter's </b><i class="bi bi-funnel-fill ml-auto pl-5"></i></div>
                 </div> -->
@@ -67,12 +67,12 @@
                     </form>
                 </div>
             </div>
-            <div class="col-9 bg-white items-card card m-1">
+            <div class="col-lg-9 col-sm-12 items-card card m-1" style="background-color: transparent;">
                 <div *ngFor="let item of items">
                     <div class="card item-card my-2">
                         <div class="row">
-                            <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
-                            <div class="col-6 py-3">
+<!--                             <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div> -->
+                            <div class="col-8 py-3 ml-2">
                                 <div>
                                 <div>House Type: {{ item.houseType | titlecase }}</div>
                                 <div>Location: {{ item.location }}</div>
@@ -83,10 +83,13 @@
                                 <div>Near Hospital: {{ item.nearHospital }}</div>
                                 </div>
                             </div>
-                            <div class="col-2 text-center my-auto">
+<!--                             <div class="col-2 text-center my-auto">
+                                <div class="btn btn-success " (click)="intrested(item)" data-toggle="modal" data-target="#Intrested"><i class="bi bi-pin-angle-fill"></i> Intrested</div>
+                            </div> -->
+                        </div>
+                        <div class="text-center ny-2">
                                 <div class="btn btn-success " (click)="intrested(item)" data-toggle="modal" data-target="#Intrested"><i class="bi bi-pin-angle-fill"></i> Intrested</div>
                             </div>
-                        </div>
                     </div>
                     <!-- <div class="card item-card my-2">
                         <div class="row">
