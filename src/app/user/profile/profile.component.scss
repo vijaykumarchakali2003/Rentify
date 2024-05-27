@@ -1,6 +1,7 @@
 .card {
     border: 5px solid rgb(9, 41, 72);
     border-radius: 25px;
+    width: 80%;
 }
 .letter {
     padding: 3px;
@@ -16,4 +17,10 @@
 }
 .card-body {
     border-top: 2px dashed rgb(9, 41, 72);
+}
+
+@media (min-width: 736px) and (min-height: 234px) {
+    .card {
+        width: 30%;
+    }
 }
