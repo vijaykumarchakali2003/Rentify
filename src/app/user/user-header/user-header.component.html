@@ -1,0 +1,34 @@
+<div>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" >Rentify</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse w-100" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link text-white link btn" (click)="direct('home')">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a  class="nav-link text-white link btn" (click)="direct('items')">Items</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                    <a class="nav-link link" href="#">Orders</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link text-white btn link" (click)="direct('cart')"><i class="bi bi-cart4"></i>  Cart</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white btn link" (click)="direct('profile')"><i class="bi bi-person-circle"></i>  Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link text-white btn" (click)="direct('logout')"><i class="bi bi-power"></i>  Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>

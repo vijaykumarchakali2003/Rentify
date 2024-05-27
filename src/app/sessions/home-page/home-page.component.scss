@@ -1,0 +1,45 @@
+.cardd {
+    background-color: transparent;
+    opacity: 0.9;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    max-height: fit-content;
+}
+.btnn {
+    border-radius: 25px;
+    background-color: hsl(222, 84%, 32%);
+    box-shadow: 0 0 10px rgb(140, 159, 207);
+    // border-spacing: 2ch;
+    // border: 2px solid white;
+    // border-right: none;
+    color: white;
+    // padding: 10px;
+    font-weight: bolder;
+    // font-size: 1rem;
+    // margin: 10px 0px;
+}
+.bt {
+    border-radius: 25px;
+    // border: 2px solid white;
+    // border-left: none;
+    color: white;
+    font-weight: bolder;
+    // padding: 10px;
+    // font-size: 1.5rem;
+    // margin: 10px 0px;
+}
+.main {
+    width: 100%;
+    // height: 60px;
+    border: 3px solid white;
+    border-radius: 25px;
+    // padding: 10px 2px
+}
+.submit {
+    background-color: hsl(221, 49%, 18%);;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    // font-size: 1.2rem;
+    border-radius: 25px;
+}

@@ -1,0 +1,21 @@
+<div>
+    <div>
+        <app-seller-header></app-seller-header>
+    </div>
+    <div class="row card w-25 mx-auto">
+        <div class="card-image my-auto pt-5 pb-3">
+            <div class="text-center letter">{{ this.userInfo.firstName[0] }}</div>
+            <div class="text-center mt-3"><b>{{ this.userInfo.firstName + " " + this.userInfo.lastName }}</b></div>
+        </div>
+        <div class="card-body">
+            <div class="text-center">
+                <div>First Name: {{ this.userInfo.firstName }}</div>
+                <div>Last Name: {{ this.userInfo.lastName }}</div>
+                <div>Email Id: {{ this.userInfo.emailId }}</div>
+                <div>Mobile Number: {{ this.userInfo.mobileNumber }}</div>
+                <div>Role: {{ this.userInfo.role }}</div>
+            </div>
+            <div class="btn btn-success w-100 my-2">Edit</div>
+        </div>    
+    </div>
+</div>

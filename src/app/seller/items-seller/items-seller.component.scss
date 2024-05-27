@@ -1,0 +1,30 @@
+.navbar-brand{
+    // font-size:2rem; 
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-style: italic; 
+    color:bisque
+}
+.link {
+    color: white;
+    // font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0px 10px;
+    border: 2px solid white;
+    border-radius: 35px;
+    padding: 5% 50%;
+    width: 150px;
+    text-align: center;
+}
+th {
+    background-color: rgb(17, 81, 145);
+    text-align: center;
+    align-items: center;
+    // font-size: 1.3rem;
+}
+.table{
+    border: 2px solid black;
+}
+tbody {
+    background-color: rgb(251, 254, 255);
+}

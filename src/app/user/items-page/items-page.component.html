@@ -1,0 +1,133 @@
+<div>
+    <div>
+        <app-user-header></app-user-header>
+    </div>
+    <div class="container-fluid mx-5">
+        <div class="row">
+            <div class="col-2 bg-white card filter m-1 p-0">
+                <!-- <div class="card-image py-3"> 
+                    <div><b> Filter's </b><i class="bi bi-funnel-fill ml-auto pl-5"></i></div>
+                </div> -->
+                <div class="card-body">
+                    <form #filterForm="ngForm" (ngSubmit)="filter(filterForm.value)">
+                        <div>
+                            <div class="text-center mb-2">
+                                <button class="filter-item p-2" type="submit"><i class="bi bi-funnel"></i> Apply Filters</button>
+                            </div>
+                            <div class="filter-item"><b>A/c to Price</b></div>
+                            <div class="py-2 px-2">
+                                <div>
+                                    <input type="radio" value="2000000" name="byPrice" ngModel> > ₹20,00,000
+                                </div>
+                                <div>
+                                    <input type="radio" value="1000000" name="byPrice" ngModel> > ₹ 10,00,000
+                                </div>
+                                <div>
+                                    <input type="radio" value="500000" name="byPrice" ngModel> > ₹ 5,00,000
+                                </div>
+                                <div>
+                                    <input type="radio" value="100000" name="byPrice" ngModel> > ₹ 1,00,000
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="filter-item"><b>A/c to Location</b></div>
+                            <div class="py-2 px-2">
+                                <div>
+                                    <input type="radio" value="Banglore" name="byLocation" ngModel> Banglore
+                                </div>
+                                <div>
+                                    <input type="radio" value="Hyderabad" name="byLocation" ngModel> Hyderabad
+                                </div>
+                                <div>
+                                    <input type="radio" value="Chennai" name="byLocation" ngModel> Chennai
+                                </div>
+                                <div>
+                                    <input type="radio" value="Delhi" name="byLocation" ngModel> Delhi
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="filter-item"><b>A/c to BedRooms</b></div>
+                            <div class="py-2 px-2">
+                                <div>
+                                    <input type="radio" value="1" name="byRoom" ngModel> Single
+                                </div>
+                                <div>
+                                    <input type="radio" value="2" name="byRoom" ngModel> Double
+                                </div>
+                                <div>
+                                    <input type="radio" value="3" name="byRoom" ngModel> Triple
+                                </div>
+                                <div>
+                                    <input type="radio" value="4" name="byRoom" ngModel> Quatriple
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-9 bg-white items-card card m-1">
+                <div *ngFor="let item of items">
+                    <div class="card item-card my-2">
+                        <div class="row">
+                            <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
+                            <div class="col-6 py-3">
+                                <div>
+                                <div>House Type: {{ item.houseType | titlecase }}</div>
+                                <div>Location: {{ item.location }}</div>
+                                <div>Cost: {{ item.cost }}</div>
+                                <div>BedRoom No: {{ item.bedroomsNumber }}</div>
+                                <div>BathRoom No: {{ item.bathroomsNumber }}</div>
+                                <div>Near School: {{ item.nearSchool }}</div>
+                                <div>Near Hospital: {{ item.nearHospital }}</div>
+                                </div>
+                            </div>
+                            <div class="col-2 text-center my-auto">
+                                <div class="btn btn-success " (click)="intrested(item)" data-toggle="modal" data-target="#Intrested"><i class="bi bi-pin-angle-fill"></i> Intrested</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card item-card my-2">
+                        <div class="row">
+                            <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
+                            <div class="col-6 py-3">
+                                <div>
+                                <div>Location: Hyderabad</div>
+                                <div>Cost: ₹20,00,00</div>
+                                <div>BedRoom No: 3</div>
+                                <div>BathRoom No: 4</div>
+                                <div>Near School: Shri Chaitanya</div>
+                                <div>Near Hospital: Rainbow</div>
+                                </div>
+                            </div>
+                            <div class="col-2 text-center my-auto">
+                                <div class="btn btn-success "><i class="bi bi-pin-angle-fill"></i> Intrested</div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Intrested" class="modal">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Email Sent</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Please check your mail, We sent the details of product and seller details on your mail.</p>
+            <div>Seller Mail: {{ sellerMail }}</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            <!-- <button type="button" class="btn btn-secondary" >Close</button> -->
+          </div>
+        </div>
+      </div>
+</div>

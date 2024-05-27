@@ -1,0 +1,45 @@
+<div>
+    <div>
+        <app-seller-header></app-seller-header>
+    </div>
+    <!-- <div class="text-white">
+        <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+    </mat-paginator> -->
+    <!-- </div> -->
+    <div class="row">
+        <table class="table mx-4 table-bordered table-hover table-responsive  table-striped text-center text-white" >
+            <thead class="p-0">
+                <tr>
+                    <th>No:</th>
+                    <th>House Type</th>
+                    <th>Location</th>
+                    <th>Cost</th>
+                    <th>BedRooms</th>
+                    <th>BathRooms</th>
+                    <th>Square Footage</th>
+                    <th>Parking</th>
+                    <th>Near Hospital</th>
+                    <th>Near School</th>
+                    <th>Buyer Mail</th>
+                </tr>
+            </thead>
+            <tbody class="text-dark" *ngFor="let item of orders;index as i">
+              <td>{{ i+1 }}</td>
+              <td>{{ item.houseType | titlecase }}</td>
+              <td>{{ item.location | titlecase }}</td>
+              <td>{{ item.cost | currency: 'INR' }}</td>
+              <td>{{ item.bedroomsNumber }}</td>
+              <td>{{ item.bathroomsNumber }}</td>
+              <td>{{ item.squareFootage }}</td>
+              <td>{{ item.parkingAre }}</td>
+              <td>{{ item.nearHospital | titlecase }}</td>
+              <td>{{ item.nearSchool | titlecase }}</td>
+              <td>{{ item.userMail }}</td>
+            </tbody>
+        </table>
+    </div>
+
+</div>

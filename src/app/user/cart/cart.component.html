@@ -1,0 +1,30 @@
+<div>
+    <div>
+        <app-user-header></app-user-header>
+    </div>
+    <div class="card w-75 mx-auto">
+        <div class="bg-white items-card card m-1">
+            <div *ngFor="let item of itemsList">
+                <div class="card item-card my-2">
+                    <div class="row">
+                        <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
+                        <div class="col-6 py-3">
+                            <div>
+                            <div>House Type: {{ item.houseType | titlecase }}</div>
+                            <div>Location: {{ item.location }}</div>
+                            <div>Cost: {{ item.cost }}</div>
+                            <div>BedRoom No: {{ item.bedroomsNumber }}</div>
+                            <div>BathRoom No: {{ item.bathroomsNumber }}</div>
+                            <div>Near School: {{ item.nearSchool }}</div>
+                            <div>Near Hospital: {{ item.nearHospital }}</div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-2 text-center my-auto">
+                            <div class="btn btn-success " (click)="intrested(item)"><i class="bi bi-pin-angle-fill"></i> Intrested</div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

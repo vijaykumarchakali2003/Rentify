@@ -1,0 +1,19 @@
+.card {
+    border: 5px solid rgb(9, 41, 72);
+    border-radius: 25px;
+}
+.letter {
+    padding: 3px;
+    background-color:rgb(9, 41, 72) ;
+    color: white;
+    border: 5px solid rgb(9, 41, 72);
+    width: 80px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3rem;
+    border-radius: 50px;
+}
+.card-body {
+    border-top: 2px dashed rgb(9, 41, 72);
+}

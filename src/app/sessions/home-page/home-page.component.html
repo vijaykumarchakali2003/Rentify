@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100" >
+    <div class="col-6 sm-col-12 align-items-center">
+        <div style="font-size:4rem; font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; color:bisque">Rentify</div>
+    </div>
+    <div class="col-6 sm-col-12 card text-center p-2 cardd">
+      <!-- <div class="pt-3">
+        <h1 style="color: linear-gradient(to right, #373b44, #4286f4);">Login</h1>
+      </div> -->
+      <div class="card-body">
+        <div class="d-flex main justify-content-center align-items-center">
+            <div class="btn w-75 btnn" (click)="register=false" [style.backgroundColor]="!register ? 'hsl(222, 84%, 32%)': 'transparent'"> Login </div>
+            <div class="btn w-75 bt" (click)="register=true" [style.backgroundColor]="!register ? '' :'hsl(222, 84%, 32%)'"> Register </div>
+        </div>
+        <div *ngIf="!register">
+          <form #loginForm="ngForm" (ngSubmit)="loginFormDetails(loginForm.value)">
+            <input type="text" id="username" name="email" ngModel class="form-control my-3" required placeholder="User Name">
+            <input type="password" id="password" name="password" ngModel class="form-control my-3" required placeholder="Password">
+            <button type="submit" class="btn mt-3 w-100 submit" style="background-color: hsl(221, 49%, 18%);">Login</button>
+          </form>
+        </div>
+        <div *ngIf="register">
+          <form #registerForm="ngForm">
+            <input type="text" id="fName" name="firstName" ngModel class="form-control my-3" required placeholder="First Name">
+            <input type="text" id="lName" name="lastName" ngModel class="form-control my-3" required placeholder="Last Name">
+            <input type="text" id="mailId" name="emailId" ngModel class="form-control my-3" required placeholder="Email Id">
+            <input type="text" id="mobileNum" name="mobileNumber" ngModel class="form-control my-3" required placeholder="Mobile Number">
+            <input type="password" id="password" name="password" ngModel class="form-control my-3" required placeholder="Password">
+            <div class="d-flex justify-content-around form-check">
+              <span style="color:white" class="form-check-lable">Buyer  <input type="radio" name="role" ngModel value="buyer" class="form-switch mx-2"> </span>
+              <span style="color:white">Seller  <input type="radio" name="role" value="seller" ngModel class="form-switch mx-2"> </span>
+            </div>
+            <!-- <input type="password" id="password" name="password" class="form-control p-3 my-3" required placeholder="Re-Enter Password"> -->
+            <button class="btn mt-1 w-100 submit" style="background-color: hsl(221, 49%, 18%);" (click)="formDetails(registerForm.value)">Register</button>
+          </form>
+        </div> 
+      </div>
+    </div>
+  </div>
