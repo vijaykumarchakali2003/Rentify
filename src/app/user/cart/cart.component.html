@@ -2,13 +2,13 @@
     <div>
         <app-user-header></app-user-header>
     </div>
-    <div class="card w-75 mx-auto">
-        <div class="bg-white items-card card m-1">
+    <div class="card mx-auto" style="width: 80%; background-color: transparent;border: 0px solid white">
+        <div class="items-card m-1">
             <div *ngFor="let item of itemsList">
                 <div class="card item-card my-2">
                     <div class="row">
-                        <div class="col-2 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
-                        <div class="col-6 py-3">
+                        <div class="col-lg-2 col-md-2 col-sm-0 like card-image text-center my-auto"> <i class="bi bi-hand-thumbs-up-fill"></i><div>Likes</div></div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 ml-3 mb-2">
                             <div>
                             <div>House Type: {{ item.houseType | titlecase }}</div>
                             <div>Location: {{ item.location }}</div>
