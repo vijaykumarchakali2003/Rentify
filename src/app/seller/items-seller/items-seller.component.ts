@@ -119,8 +119,9 @@ export class ItemsSellerComponent implements OnInit {
       data.squareFootage = details.squareFootage;
     }
     this.http.patch('https://rentify-api-t4b2.onrender.com/updateItems', data).subscribe( (res) => {
+      this.getItems();
       alert('Updated');
-      location.reload();
+      // location.reload();
     });
     this.getItems();
   }
